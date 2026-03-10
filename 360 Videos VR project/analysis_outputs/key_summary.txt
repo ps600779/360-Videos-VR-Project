@@ -1,0 +1,5 @@
+n_participants=40
+n_video_rows=200
+outlier_rows=1
+group_counts={'low_depression': 32, 'elevated_depression': 8}
+phq_gad_r=0.5793, p=0.000090
