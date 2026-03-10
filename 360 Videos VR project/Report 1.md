@@ -261,31 +261,13 @@ Using only BRSM-taught concepts and methods, this analysis shows:
 3. For H2 and H3, run the same planned association and repeated-measures tests with explicit assumption checks (distribution/outliers) before inference.
 4. Maintain multiple-comparison correction for all post-hoc tests (Bonferroni/FDR) so support for hypotheses is statistically robust.
 
-## 6. Files generated for reproducibility
-
-- Analysis script: `analysis_outputs/run_analysis.py`
-- Output tables:
-  - `analysis_outputs/group_tests.csv`
-  - `analysis_outputs/correlations.csv`
-   - `analysis_outputs/correlation_matrix.csv`
-  - `analysis_outputs/regression_controls.csv`
-  - `analysis_outputs/anova_speed.txt`
-  - `analysis_outputs/pairwise_video_tests_bonferroni.csv`
-- Figures:
-  - `analysis_outputs/figures/fig1_phq_distribution.png`
-   - `analysis_outputs/figures/fig6_dataset_speed_distribution.png`
-  - `analysis_outputs/figures/fig2_speed_by_depression_group.png`
-  - `analysis_outputs/figures/fig3_symptoms_vs_variability.png`
-  - `analysis_outputs/figures/fig4_video_speed_pointplot.png`
-   - `analysis_outputs/figures/fig5_correlation_matrix_heatmap.png`
-
-## 7. Team Contributions
+## 6. Team Contributions
 
 - **Priyanshu Sharma [2024201046]:** Led project coordination, cleaned and merged participant-level and headtracking data, and drafted the Introduction/Conclusion sections.
 - **Amarnath Kumar [2024202024]:** Implemented descriptive and inferential analyses (group tests, post-hoc comparisons) and verified statistical outputs.
 - **Prakhar Kesari [2024202023]:** Prepared visualizations (distribution, group, video-wise, and correlation matrix plots), compiled Results interpretation, and finalized formatting/references.
 
-## 8. References
+## 7. References
 
 - What Do Head Scans Reveal About Depression? Insights from 360° Psychomotor Assessment. (2025)
 - Development and validation of brief measures of positive and negative affect: the PANAS scales. (1988)
