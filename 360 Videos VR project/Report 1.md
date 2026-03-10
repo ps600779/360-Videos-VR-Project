@@ -11,7 +11,11 @@
 
 ## 1. Introduction
 
-This report analyzes whether head-tracking metrics from 360° VR videos are associated with depressive symptoms in college students. The project hypothesis (from the experiment brief) is that participants with higher depressive symptoms may show a stunted psychomotor response (e.g., lower movement speed and reduced variability), potentially linked to anhedonia and psychomotor slowing.
+Depression is a widespread mental health condition that often involves persistent low mood, reduced interest in daily activities, and lower motivation. In addition to emotional symptoms, prior literature also describes behavioral changes such as psychomotor slowing, where movement becomes less frequent or less dynamic. Identifying measurable behavioral signatures of this pattern can support earlier screening and more objective monitoring of mental health status.
+
+Virtual reality (VR) offers a useful setting for this type of measurement because it combines controlled stimulus presentation with high-resolution motion tracking. During immersive 360° content, headset sensors continuously capture head orientation and movement, including rotation-related behavior that can be summarized as speed and variability. These headtracking features provide a practical proxy for psychomotor response during naturalistic yet standardized tasks.
+
+In this study, participants viewed multiple 360° VR videos while headtracking data were recorded, and they also completed psychological scales including PHQ-9 (depressive symptoms) and GAD-7 (anxiety symptoms). The main goal of this exploratory analysis is to test whether higher depressive symptom levels are associated with reduced head movement, and to examine this relationship while accounting for anxiety overlap and video-specific context effects.
 
 The analysis scope:-
 
@@ -41,6 +45,12 @@ Headtracking files provided per-video summary rows with:
 - average rotation speed (X, Y, Z, total).
 
 This report uses **rotation speed total** as the primary psychomotor speed measure and the average of circular SD across X/Y/Z as a movement-variability measure.
+
+### Hypotheses
+
+- **H1 (Primary):** Participants with elevated depressive symptoms (PHQ-9 >= 10) will show lower mean head-movement speed than participants with low depressive symptoms.
+- **H2:** Higher depressive symptom severity (continuous PHQ-9) will be associated with reduced psychomotor response (lower speed and lower movement variability).
+- **H3:** Video context will significantly affect psychomotor response (rotation speed), indicating a within-subject video-type effect.
 
 ## 2. Methods
 
@@ -88,7 +98,7 @@ This preserves the hypothesis focus while remaining clinically interpretable.
    - Histograms, box/strip plots, point plots with confidence intervals.
 
 2. **Group hypothesis tests**
-   - Independent-samples t-tests (Welch) for elevated vs low depression groups on:
+   - Independent-samples t-tests for elevated vs low depression groups on:
      - mean rotation speed total,
      - mean circular SD.
    - Effect size: Cohen’s d.
@@ -100,7 +110,7 @@ This preserves the hypothesis focus while remaining clinically interpretable.
    - Multiple linear regression with both PHQ and GAD entered simultaneously to estimate unique contributions.
 
 5. **Video-type psychomotor differences**
-   <!-- - Repeated-measures ANOVA across five videos for rotation speed total. -->
+   - Repeated-measures ANOVA across five videos for rotation speed total.
    - Post-hoc paired t-tests with **Bonferroni correction**.
 
 Alpha was 0.05 unless otherwise stated.
@@ -142,6 +152,8 @@ Interpretation:
 
 ![ Overall distribution of rotation speed across all video-level observations](analysis_outputs/figures/fig6_dataset_speed_distribution.png){width=60%}
 
+![Correlation matrix heatmap (participant-level variables)](analysis_outputs/figures/fig5_correlation_matrix_heatmap.png){width=60%}
+
 
 ### 3.2 Central hypothesis: depression and psychomotor response
 
@@ -150,12 +162,12 @@ Interpretation:
 **Mean rotation speed total**
 - Elevated depression (n=8): 32.68
 - Low depression (n=32): 32.31
-- Welch t-test: $t = 0.13$, $p = .898$, $d = 0.05$
+- Independent-samples t-test: $t = 0.13$, $p = .898$, $d = 0.05$
 
 **Mean circular SD (variability)**
 - Elevated depression: 32.35
 - Low depression: 27.17
-- Welch t-test: $t = 0.92$, $p = .381$, $d = 0.40$
+- Independent-samples t-test: $t = 0.92$, $p = .381$, $d = 0.40$
 
 Interpretation:
 - No statistically significant group difference in psychomotor speed.
@@ -201,8 +213,8 @@ Video-wise speed means:
 - V4: 24.17
 - V5: 31.03
 
-<!-- Repeated-measures ANOVA:
-- $F(4,156) = 34.58$, $p < .001$ -->
+Repeated-measures ANOVA:
+- $F(4,156) = 34.58$, $p < .001$
 
 Bonferroni-corrected pairwise results:
 - Significant: V1>V2, V1>V3, V1>V4, V1>V5, V2>V4, V3>V4, V3>V5, V5>V4
@@ -244,10 +256,10 @@ Using only BRSM-taught concepts and methods, this analysis shows:
 
 ### Practical next steps for Report 2
 
-1. Add preregistered primary outcome(s) and planned contrasts.
-2. Model repeated measures more explicitly for both symptom and video effects.
-3. Integrate valence/arousal/presence scores as predictors/moderators of movement metrics.
-4. Report confidence intervals for all key effects and maintain correction for multiple testing.
+1. Keep H1 as the single confirmatory hypothesis and pre-register the exact test (independent-samples t-test on mean rotation speed), with H2/H3 treated as secondary.
+2. Increase power for H1 with a larger and more balanced sample across depression groups, and report effect size + confidence interval + p-value together.
+3. For H2 and H3, run the same planned association and repeated-measures tests with explicit assumption checks (distribution/outliers) before inference.
+4. Maintain multiple-comparison correction for all post-hoc tests (Bonferroni/FDR) so support for hypotheses is statistically robust.
 
 ## 6. Files generated for reproducibility
 
@@ -261,6 +273,7 @@ Using only BRSM-taught concepts and methods, this analysis shows:
   - `analysis_outputs/pairwise_video_tests_bonferroni.csv`
 - Figures:
   - `analysis_outputs/figures/fig1_phq_distribution.png`
+   - `analysis_outputs/figures/fig6_dataset_speed_distribution.png`
   - `analysis_outputs/figures/fig2_speed_by_depression_group.png`
   - `analysis_outputs/figures/fig3_symptoms_vs_variability.png`
   - `analysis_outputs/figures/fig4_video_speed_pointplot.png`
@@ -273,18 +286,6 @@ Using only BRSM-taught concepts and methods, this analysis shows:
 - **Prakhar Kesari [2024202023]:** Prepared visualizations (distribution, group, video-wise, and correlation matrix plots), compiled Results interpretation, and finalized formatting/references.
 
 ## 8. References
-
-### Course materials (used for concepts and methods)
-
-- BRSM_L1_DataVisualization_Summarization_S26.pdf
-- BRSM_L2_DataVisualization_Summarization_S26.pdf
-- Data Visualization and Summarization.pdf
-- Hypothesis testing .pdf
-- Multiple Comparisons.pdf
-- Probability Distribution.pdf
-- Sampling_and_estimating_quantities_Lec4.pdf
-
-### Domain/measurement references from experiment brief
 
 - What Do Head Scans Reveal About Depression? Insights from 360° Psychomotor Assessment. (2025)
 - Development and validation of brief measures of positive and negative affect: the PANAS scales. (1988)
