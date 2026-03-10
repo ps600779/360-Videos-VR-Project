@@ -16,6 +16,10 @@ This workspace contains materials for the VR experiment report and related analy
 - Analysis outputs: `360 Videos VR project/analysis_outputs/`
 - Raw data: `360 Videos VR project/data/headtracking-data/`
 
+## Repository
+
+- GitHub: https://github.com/ps600779/360-Videos-VR-Project
+
 ## Notes
 
 - Keep raw data files unchanged to maintain reproducibility.
