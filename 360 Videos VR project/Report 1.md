@@ -6,6 +6,9 @@
 - Amarnath Kumar [2024202024]
 - Prakhar Kesari [2024202023]
 
+## Repository
+- [Github-Repository](https://github.com/ps600779/360-Videos-VR-Project)
+
 ## 1. Introduction
 
 This report analyzes whether head-tracking metrics from 360° VR videos are associated with depressive symptoms in college students. The project hypothesis (from the experiment brief) is that participants with higher depressive symptoms may show a stunted psychomotor response (e.g., lower movement speed and reduced variability), potentially linked to anhedonia and psychomotor slowing.
@@ -98,7 +101,7 @@ This preserves the hypothesis focus while remaining clinically interpretable.
 
 5. **Video-type psychomotor differences**
    <!-- - Repeated-measures ANOVA across five videos for rotation speed total. -->
-   - Post-hoc paired t-tests with **Bonferroni correction** (as discussed in multiple-comparisons slides).
+   - Post-hoc paired t-tests with **Bonferroni correction**.
 
 Alpha was 0.05 unless otherwise stated.
 
@@ -135,7 +138,9 @@ Interpretation:
 - Speed has near-zero correlations with symptom variables.
 - Variability has its strongest positive relationship with anxiety (GAD), which supports the regression finding in Section 3.3.
 
-![Figure 1: PHQ-9 score distribution across participants](analysis_outputs/figures/fig1_phq_distribution.png)
+![PHQ-9 score distribution across participants](analysis_outputs/figures/fig1_phq_distribution.png){width=50%}
+
+![ Overall distribution of rotation speed across all video-level observations](analysis_outputs/figures/fig6_dataset_speed_distribution.png){width=60%}
 
 
 ### 3.2 Central hypothesis: depression and psychomotor response
@@ -156,7 +161,7 @@ Interpretation:
 - No statistically significant group difference in psychomotor speed.
 - Variability shows a small-to-moderate numeric increase in elevated depression, but not significant with current sample size.
 
-![Figure 2: Rotation speed by depression group](analysis_outputs/figures/fig2_speed_by_depression_group.png)
+![Rotation speed by depression group](analysis_outputs/figures/fig2_speed_by_depression_group.png){width=50%}
 
 #### B) Continuous symptom associations
 
@@ -167,7 +172,7 @@ Interpretation:
 Interpretation:
 - Depression severity does not show a reliable linear association with speed or variability in this sample.
 
-![Figure 3: Symptom scores vs movement variability](analysis_outputs/figures/fig3_symptoms_vs_variability.png)
+![Symptom scores vs movement variability](analysis_outputs/figures/fig3_symptoms_vs_variability.png)
 
 ### 3.3 Reconciling depression vs anxiety overlap
 
@@ -196,8 +201,8 @@ Video-wise speed means:
 - V4: 24.17
 - V5: 31.03
 
-Repeated-measures ANOVA:
-- $F(4,156) = 34.58$, $p < .001$
+<!-- Repeated-measures ANOVA:
+- $F(4,156) = 34.58$, $p < .001$ -->
 
 Bonferroni-corrected pairwise results:
 - Significant: V1>V2, V1>V3, V1>V4, V1>V5, V2>V4, V3>V4, V3>V5, V5>V4
@@ -211,7 +216,7 @@ Possible behavioral explanation (consistent with design/measurement framing from
 - Different scene dynamics, emotional valence/arousal, attentional focus, and motor strategy demands likely drive distinct movement profiles.
 - Psychomotor response in VR appears **stimulus-dependent**, not just trait-dependent.
 
-![Figure 4: Video-wise rotation speed comparison](analysis_outputs/figures/fig4_video_speed_pointplot.png)
+![Video-wise rotation speed comparison](analysis_outputs/figures/fig4_video_speed_pointplot.png){width=50%}
 
 ## 4. Replication judgment and additional insights
 
