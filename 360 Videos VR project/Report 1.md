@@ -263,9 +263,9 @@ Using only BRSM-taught concepts and methods, this analysis shows:
 
 ## 6. Team Contributions
 
-- **Priyanshu Sharma [2024201046]:** Led project coordination, cleaned and merged participant-level and headtracking data, and drafted the Introduction/Conclusion sections.
-- **Amarnath Kumar [2024202024]:** Implemented descriptive and inferential analyses (group tests, post-hoc comparisons) and verified statistical outputs.
-- **Prakhar Kesari [2024202023]:** Prepared visualizations (distribution, group, video-wise, and correlation matrix plots), compiled Results interpretation, and finalized formatting/references.
+- **Priyanshu Sharma:** Led project coordination, cleaned and merged participant-level and headtracking data, and drafted the Introduction/Conclusion sections.
+- **Amarnath Kumar:** Implemented descriptive and inferential analyses (group tests, post-hoc comparisons) and verified statistical outputs.
+- **Prakhar Kesari:** Prepared visualizations (distribution, group, video-wise, and correlation matrix plots), compiled Results interpretation, and finalized formatting/references.
 
 ## 7. References
 
