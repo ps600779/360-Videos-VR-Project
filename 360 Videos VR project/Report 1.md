@@ -244,11 +244,10 @@ Using only BRSM-taught concepts and methods, this analysis shows:
 
 ### Practical next steps for Report 2
 
-1. Increase statistical power (larger N) to estimate small effects reliably.
-2. Add preregistered primary outcome(s) and planned contrasts.
-3. Model repeated measures more explicitly for both symptom and video effects (while staying aligned with course methods).
-4. Integrate valence/arousal/presence scores as predictors/moderators of movement metrics.
-5. Report confidence intervals for all key effects and maintain correction for multiple testing.
+1. Add preregistered primary outcome(s) and planned contrasts.
+2. Model repeated measures more explicitly for both symptom and video effects.
+3. Integrate valence/arousal/presence scores as predictors/moderators of movement metrics.
+4. Report confidence intervals for all key effects and maintain correction for multiple testing.
 
 ## 6. Files generated for reproducibility
 
@@ -284,8 +283,6 @@ Using only BRSM-taught concepts and methods, this analysis shows:
 - Multiple Comparisons.pdf
 - Probability Distribution.pdf
 - Sampling_and_estimating_quantities_Lec4.pdf
-- Research Design.pdf
-- Why do Stats_.pdf
 
 ### Domain/measurement references from experiment brief
 
